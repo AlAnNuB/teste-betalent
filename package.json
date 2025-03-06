@@ -1,7 +1,7 @@
 {
   "name": "teste_betalent",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,14 +10,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "@vitejs/plugin-react": "^4.3.4",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
+    "@vitejs/plugin-react": "4.3.4",
+    "typescript": "5.8.2",
+    "vite": "6.2.0"
   }
 }
