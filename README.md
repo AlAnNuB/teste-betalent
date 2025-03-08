@@ -1,54 +1,96 @@
-# React + TypeScript + Vite
+# Teste Betalent - Sistema de Gerenciamento de Funcionários
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido como parte do processo seletivo da BeTalent para a posição de Front-end. Consiste em uma tabela responsiva que exibe e filtra informações de funcionários, construída com React e TypeScript, consumindo dados de uma API simulada com json-server.
 
-Currently, two official plugins are available:
+## 🚀 Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- ✨ Interface moderna e responsiva
+- 📊 Tabela de funcionários
+- 🔍 Visualização detalhada das informações dos funcionários
+- 📅 Formatação automática de datas
+- 📞 Formatação automática de números de telefone
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React
+- TypeScript
+- CSS Modules
+- Vite (Build tool)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 📋 Pré-requisitos
+
+Antes de começar, você precisará ter instalado em sua máquina:
+
+- Node.js
+- npm 
+
+## 🔧 Instalação
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/AlAnNuB/teste-betalent.git
+cd teste-betalent
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+2. Instale as dependências:
+```bash
+npm install
 ```
+
+## 🚀 Executando o Projeto
+
+### 1 passo - Executando o servidor
+
+Para iniciar o servidor no terminal digite o comando:
+
+```bash
+npm run server
+```
+
+O servidor de desenvolvimento iniciará em `http://localhost:3000`
+
+Mantenha o terminal aberto para que o servidor fique em execução.
+
+### 2 passo - Executando o front end
+
+Para iniciar o front end com o vite em outra aba do terminal digite:
+
+```bash
+npm run dev
+```
+
+O servidor de desenvolvimento iniciará em `http://localhost:3001`
+
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/         # Componentes React reutilizáveis
+│   └── table/         # Componente de tabela responsiva
+|   └── input/         # Componente de input de texto
+├── hooks/             # Custom hooks React
+├── main.css/          # Arquivos de estilo globais
+└── main.tsx           # Componente principal da aplicação
+```
+
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👥 Autores
+
+* **Alan Miranda** - [AlAnNuB](https://github.com/AlAnNuB)
+
+## 📞 Suporte
+
+Para suporte, envie um email para alannub6@gmail.com ou abra uma issue no repositório.
