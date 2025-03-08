@@ -4,10 +4,10 @@
   "version": "0.0.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "front": "vite",
+    "server": "json-server ./server/db.json",
     "build": "tsc -b && vite build",
     "lint": "biome format --write ./src",
-    "server": "json-server ./server/db.json",
     "preview": "vite preview"
   },
   "dependencies": {

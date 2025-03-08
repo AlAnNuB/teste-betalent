@@ -56,7 +56,7 @@ Mantenha o terminal aberto para que o servidor fique em execução.
 Para iniciar o front end com o vite em outra aba do terminal digite:
 
 ```bash
-npm run dev
+npm run front
 ```
 
 O servidor de desenvolvimento iniciará em `http://localhost:3001`
