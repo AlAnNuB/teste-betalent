@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 
 :root {
-	--font-family: 'Helvetica Neue', sans-serif;
+	--font-family: "Helvetica Neue", sans-serif;
 
 	font-synthesis: none;
 	text-rendering: optimizeLegibility;
@@ -13,7 +12,7 @@
 	--color-white: #fff;
 	--text-color: #1c1c1c;
 	--search-color: #9e9e9e;
-	--table-header-color: #0500FF;
+	--table-header-color: #0500ff;
 	--border-color: #dfdfdf;
 }
 
