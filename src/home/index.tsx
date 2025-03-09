@@ -4,6 +4,7 @@ import Logo from '@/assets/Logo.svg';
 import { Input } from '@/components/input';
 import { Table } from '@/components/table';
 import { useEmployees } from '@/hooks/useEmployees';
+import { Header } from '@/components/header';
 
 export const Home = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -11,15 +12,14 @@ export const Home = () => {
 
   const filteredEmployees = employees.filter(employee =>
     employee.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    employee.position.toLowerCase().includes(searchTerm.toLowerCase())
+    employee.position.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    employee.phone.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   if (isLoading) {
     return (
       <div className="app-container">
-        <header className="header">
-          <img src={Logo} alt="BeTalent Logo" />
-        </header>
+        <Header logo={Logo} alt="BeTalent Logo" />
         <div className="content">
           <p>Carregando...</p>
         </div>
@@ -30,9 +30,7 @@ export const Home = () => {
   if (error) {
     return (
       <div className="app-container">
-        <header className="header">
-          <img src={Logo} alt="BeTalent Logo" />
-        </header>
+        <Header logo={Logo} alt="BeTalent Logo" />
         <div className="content">
           <p>Erro: {error}</p>
         </div>
@@ -42,9 +40,7 @@ export const Home = () => {
 
   return (
     <div className="app-container">
-      <header className="header">
-        <img src={Logo} alt="BeTalent Logo" />
-      </header>
+      <Header logo={Logo} alt="BeTalent Logo" />
 
       <div className="content">
         <div className="title-search">

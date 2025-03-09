@@ -20,39 +20,39 @@ interface DbResponse {
 
 export const useEmployees = () => {
   const [employees, setEmployees] = useState<Employee[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    const fetchEmployees = async () => {
-      try {
-        const response = await fetch('http://localhost:3000/employees');
-        
-        if (!response.ok) {
-          throw new Error('Falha ao carregar funcionários, tente novamente mais tarde');
-        }
-
-        const data: DbResponse[] = await response.json();
-
-        const formattedData: Employee[] = data.map((employee: DbResponse) => {
-          return {
-            id: employee.id,
-            name: employee.name,
-            position: employee.job,
-            hireDate: employee.admission_date,
-            phone: employee.phone,
-            image: employee.image,
-          }
-        })
-        
-        setEmployees(formattedData);
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'Ocorreu um erro inesperado');
-      } finally {
-        setIsLoading(false);
+  const fetchEmployees = async () => {
+    try {
+      const response = await fetch('http://localhost:3000/employees');
+      
+      if (!response.ok) {
+        throw new Error('Falha ao carregar funcionários, tente novamente mais tarde');
       }
-    };
 
+      const data: DbResponse[] = await response.json();
+
+      const formattedData: Employee[] = data.map((employee: DbResponse): Employee => {
+        return {
+          id: employee.id,
+          name: employee.name,
+          position: employee.job,
+          hireDate: employee.admission_date,
+          phone: employee.phone,
+          image: employee.image,
+        }
+      })
+      
+      setEmployees(formattedData);
+    } catch (err: unknown) {
+        setError((err as Error).message);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
     fetchEmployees();
   }, []);
 
