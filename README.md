@@ -39,24 +39,32 @@ npm install
 
 ## 🚀 Executando o Projeto
 
-### 1 passo - Executando o servidor
+### Executando o servidor e o front end juntos:
+
+Para iniciar o servidor e o front end no terminal digite o comando:
+
+```bash
+npm run start
+```
+
+### Executando o servidor
 
 Para iniciar o servidor no terminal digite o comando:
 
 ```bash
-npm run server
+npm run start:server
 ```
 
 O servidor de desenvolvimento iniciará em `http://localhost:3000`
 
 Mantenha o terminal aberto para que o servidor fique em execução.
 
-### 2 passo - Executando o front end
+### Executando o front end
 
 Para iniciar o front end com o vite em outra aba do terminal digite:
 
 ```bash
-npm run front
+npm run start:front
 ```
 
 O servidor de desenvolvimento iniciará em `http://localhost:3001`
@@ -69,6 +77,7 @@ src/
 ├── components/         # Componentes React reutilizáveis
 │   └── table/         # Componente de tabela responsiva
 |   └── input/         # Componente de input de texto
+|   └── header/         # Componente superior com o logo
 ├── hooks/             # Custom hooks React
 ├── main.css/          # Arquivos de estilo globais
 └── main.tsx           # Componente principal da aplicação

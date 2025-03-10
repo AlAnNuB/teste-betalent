@@ -1,11 +1,12 @@
 {
   "name": "teste_betalent",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "front": "vite",
-    "server": "json-server ./server/db.json",
+    "start": "concurrently \"npm run start:front\" \"npm run start:server\"",
+    "start:front": "vite",
+    "start:server": "json-server ./server/db.json",
     "build": "tsc -b && vite build",
     "lint": "biome format --write ./src",
     "preview": "vite preview"
@@ -20,6 +21,7 @@
     "@types/react": "19.0.10",
     "@types/react-dom": "19.0.4",
     "@vitejs/plugin-react": "4.3.4",
+    "concurrently": "9.1.2",
     "typescript": "5.8.2",
     "vite": "6.2.0"
   }
